@@ -1,0 +1,69 @@
+/*
+	2/2/2018
+	Emily Meuer
+*/
+
+
+body {
+	background-color: #f9f2ec;
+	font-family: Calibri, sans-serif;
+	font-size: 1.2rem;
+}
+
+div {
+	font-family: serif;
+	color: #604020;
+}
+
+div p {
+	background-color: #c65a7e;
+	color: #ffffff;
+}
+
+html {
+	font-size: 80%;
+}
+
+h1 {
+	color: #99004d;
+	font-size: 5.5rem;
+}
+
+h2 {
+	color: #ffccff;
+}
+
+h3 {
+	color: #334d00;
+}
+
+h4 {
+/*	color: 9b319b;	*/
+	color: #742574;
+}
+
+table {
+	background-color: #ccff66;
+}
+
+ol, ul {
+	background-color: #97836f;
+	color:	#f9f3ec;
+}
+
+.bigHeader {
+	font-size:	4rem;
+	font-style: italic;
+}
+
+.poemTitle {
+	font-size:		2rem;
+	font-weight:	bold;
+}
+
+.poemAuthor {
+	font-size:	0.85rem;
+	font-style:	italic;
+}
+
+
