@@ -1,0 +1,66 @@
+/*
+	Emily Meuer
+	Feb. 7, 2018
+*/
+
+h1 {
+	border-top: 	10px dotted #00cc99;
+	border-bottom: 	10px dotted #00cc99;
+	margin-left: 	auto;
+	margin-right: 	auto;
+}
+
+html {
+	color: #003325;
+}
+
+body {
+	height: 100vh
+}
+
+.tallDiv {
+	height: 			50%;
+	background-color: 	#00cc99;
+}
+
+.innerDiv {
+	height: 80%;
+	width: 	80%;
+	margin: auto;
+}
+
+.yellow {
+	background-color: #ffff99;
+}
+
+.pink {
+	background-color: #ff0066;
+}
+
+.lightPink {
+	background-color:	#ffcccc;
+}
+
+.blue {
+	background-color:	#80ccff;
+}
+
+.purple {
+	background-color:	#cc0099;
+}
+
+.floatLeft {
+	float:	left;
+}
+
+.floatRight {
+	float:	right;
+}
+
+.clearLeft {
+	clear:	left;
+}
+
+.clearRight {
+	clear:	right;
+}
