@@ -6,8 +6,9 @@
 h1 {
 	border-top: 	10px dotted #00cc99;
 	border-bottom: 	10px dotted #00cc99;
-	margin-left: 	auto;
-	margin-right: 	auto;
+	margin:			0px;
+	background-color:	#ffffff;
+	width:			100vw;
 }
 
 html {
@@ -15,30 +16,77 @@ html {
 }
 
 body {
-	height: 100vh
+	height: 100vh;
+	margin:0px;
+}
+
+canvas {
+	width: 	20rem;
+	height: 2rem;
+	border:	1px solid #000000;
+}
+
+.static {
+	position:	static;
+}
+
+.fixed {
+	position:	fixed;
+	top:		0px;
+	z-index:	6;
+}
+
+#firstElement {
+}
+
+#pink {
+	background-color:	#ff0066;
+}
+
+.relative {
+	position:	relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.headerPlaceholder {
+	position:	static;
+	top:		10px;
+	height:		20%;
+}
+
+.headerSpace {
+	margin-top:			18%;
+	z-index:			0;
 }
 
 .tallDiv {
-	height: 			50%;
+	height: 			25em;
 	background-color: 	#00cc99;
+	z-index:	1;
 }
 
 .innerDiv {
-	height: 80%;
-	width: 	80%;
-	margin: auto;
+	height: 	80%;
+	width: 		80%;
+	margin:		auto;
+	z-index:			2;
 }
 
 .yellow {
-	background-color: #ffff99;
+	background-color:	#ffff99;
+	z-index:			4;
 }
 
 .pink {
-	background-color: #ff0066;
+	background-color:	#ff0066;
 }
 
 .lightPink {
 	background-color:	#ffcccc;
+	z-index:			3;
 }
 
 .blue {
