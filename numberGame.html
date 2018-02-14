@@ -5,20 +5,25 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" href="style.css"/>
+		
 		<script type="text/javascript" src="numberGame.js"></script>
 		<title>Number Game</title>
 	</head>
 	
+	
+	
 	<body>
-		<h2>Guess a Number!</h2>
+		<h2>Guess a Number from 0 to 99:</h2>
 		
-		<form onsubmit="guessButton()">
-			<input type="text" id="guess"></input>
-			<input type="submit" value="Guess"></input>			
-		</form>
+		<input type="text" id="guess"></input>
+		<button type="button" onclick="guessButton()">Guess</button>			
+		
+		<br></br>
+	
+		<canvas id="canvas"></canvas>
 		
 		<br/>
 		
-		<canvas id="canvas"></canvas>
+		<p id="pastGuesses">Past Guesses:</p>
 	</body>
 </html>

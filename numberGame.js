@@ -5,14 +5,72 @@
 	Number-Guessing Game
 */
 
-function guessButton()
+var	number;
+var	closestLow;
+var	closestHigh;
+var	closestLowPx;
+var	closestHighPx;
+
+window.onload=function()
 {
-	window.alert("Guess was submitted; guess = " +
-		document.getElementById("guess").value);
-		
+	number	= Math.floor(Math.random() * 100);
+	closestLow	= 0;
+	closestHigh	= 99;
+// Onload, draw it but either fill with white, or make dimensions of filling rectangles very small
+// Load the correct number and keep it somewhere
+
+// On receiving a guess, the program will compare it to the number,
+// if necessary, adjust closestLow and closestHigh, then call our draw function again
+// (or just draw it again?)
+
+/*
 	var canvas 	= document.getElementById("canvas");
 	var context = canvas.getContext("2d");
 	
 	context.fillStyle	= "#ffccff";
-	context.fillRect(0, 0, 0, 50);
+	context.fillRect(0, 0, closestLow, canvas.height);
+	*/
+}; // onload
+
+function guessButton()
+{
+//	window.alert("Guess was submitted; guess = " +
+//		document.getElementById("guess").value);
+		
+//((document.getElementById("guess").value == number);
+	var canvas 	= document.getElementById("canvas");
+	var context = canvas.getContext("2d");
+	var	guess	= parseInt(document.getElementById("guess").value);
+	var	pastGuessesElement	= document.getElementById("pastGuesses");
+	
+	if(isNaN(guess) || (guess < 0) || (guess > 99))
+	{
+		console.error("Sorry, '" + document.getElementById("guess").value + "' is not a valid guess; please enter a number from 0 - 99.");
+	} else {
+		if(guess == number)
+		{
+			// Correct guess!
+			window.alert("Congratulations!  The number was indeed " + number + ". :D");
+		} else if((guess > number) && (guess < closestHigh))
+		{
+			closestHigh	= guess;
+		} else if((guess < number) && (guess > closestLow))
+		{
+			closestLow = guess;
+		}
+		
+		pastGuesses.innerHTML = pastGuesses.innerHTML + "<br/>" + guess;
+	}
+	
+	closestLowPx	= (closestLow * canvas.width) / 100;
+	closestHighPx	= (99 - closestHigh) * canvas.width / 100;
+	context.fillStyle	= "#cc0099";
+	context.fillRect(0, 0, closestLowPx, canvas.height);
+	context.fillRect((canvas.width - closestHighPx), 0, closestHighPx, canvas.height);
+	
+	// Easier to just put them in an element and position them at closestLowPx and closestHighPx
+	context.fillStyle	= "#ffffff";
+	context.font		= "30px Arial";
+	context.fillText((closestLow + ""), canvas.width / 2, canvas.height / 2);
+//	context.fillText((closestHigh + ""), closestHighPx, canvas.height / 2);
 }
