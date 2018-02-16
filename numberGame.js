@@ -16,6 +16,9 @@ window.onload=function()
 	number	= Math.floor(Math.random() * 100);
 	closestLow	= 0;
 	closestHigh	= 99;
+
+	closestHighPx	= (99 - closestHigh) * canvas.width / 100;
+	document.getElementById("highGuess").style.left	= closestHighPx + "px";
 // Onload, draw it but either fill with white, or make dimensions of filling rectangles very small
 // Load the correct number and keep it somewhere
 
@@ -31,6 +34,30 @@ window.onload=function()
 	context.fillRect(0, 0, closestLow, canvas.height);
 	*/
 }; // onload
+
+function personSortTest()
+{
+	var person1	= {
+		fname:	"John",
+		lname:	"Smith",
+		age:	12
+	};
+	var person1	= {
+		fname:	"John",
+		lname:	"Smith",
+		age:	12
+	};
+	var person1	= {
+		fname:	"John",
+		lname:	"Smith",
+		age:	12
+	};
+	var person1	= {
+		fname:	"John",
+		lname:	"Smith",
+		age:	12
+	};
+} // personSortTest
 
 function guessButton()
 {
@@ -69,8 +96,12 @@ function guessButton()
 	context.fillRect((canvas.width - closestHighPx), 0, closestHighPx, canvas.height);
 	
 	// Easier to just put them in an element and position them at closestLowPx and closestHighPx
-	context.fillStyle	= "#ffffff";
-	context.font		= "30px Arial";
-	context.fillText((closestLow + ""), canvas.width / 2, canvas.height / 2);
+	document.getElementById("lowGuess").innerHTML	= closestLow;
+	document.getElementById("lowGuess").style.left	= closestLowPx + "px"
+	
+	document.getElementById("highGuess").innerHTML	= closestHigh;
+	document.getElementById("highGuess").style.left	= closestHighPx + "px";
 //	context.fillText((closestHigh + ""), closestHighPx, canvas.height / 2);
-}
+
+	pastGuessesElement.style.visibility = "visible";
+} // guessButton

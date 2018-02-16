@@ -24,6 +24,7 @@ canvas {
 	width: 	20rem;
 	height: 2rem;
 	border:	1px solid #000000;
+	clear:	left;
 }
 
 .static {
@@ -34,6 +35,20 @@ canvas {
 	position:	fixed;
 	top:		0px;
 	z-index:	6;
+}
+
+#lowGuess {
+	position:	relative;
+	float:		left;
+}
+
+#highGuess {
+	position:	relative;
+	right:		100px;
+}
+
+#pastGuesses {
+	visibility:	hidden;
 }
 
 #firstElement {
