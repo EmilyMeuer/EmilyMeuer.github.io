@@ -6,6 +6,7 @@
 */
 
 var	number;
+var	canvas;
 var	closestLow;
 var	closestHigh;
 var	closestLowPx;
@@ -17,6 +18,7 @@ window.onload=function()
 	closestLow	= 0;
 	closestHigh	= 99;
 
+	canvas 	= document.getElementById("numberCanvas");
 	closestHighPx	= (99 - closestHigh) * canvas.width / 100;
 	document.getElementById("highGuess").style.left	= closestHighPx + "px";
 // Onload, draw it but either fill with white, or make dimensions of filling rectangles very small
@@ -25,39 +27,7 @@ window.onload=function()
 // On receiving a guess, the program will compare it to the number,
 // if necessary, adjust closestLow and closestHigh, then call our draw function again
 // (or just draw it again?)
-
-/*
-	var canvas 	= document.getElementById("canvas");
-	var context = canvas.getContext("2d");
-	
-	context.fillStyle	= "#ffccff";
-	context.fillRect(0, 0, closestLow, canvas.height);
-	*/
 }; // onload
-
-function personSortTest()
-{
-	var person1	= {
-		fname:	"John",
-		lname:	"Smith",
-		age:	12
-	};
-	var person1	= {
-		fname:	"John",
-		lname:	"Smith",
-		age:	12
-	};
-	var person1	= {
-		fname:	"John",
-		lname:	"Smith",
-		age:	12
-	};
-	var person1	= {
-		fname:	"John",
-		lname:	"Smith",
-		age:	12
-	};
-} // personSortTest
 
 function guessButton()
 {
@@ -65,7 +35,6 @@ function guessButton()
 //		document.getElementById("guess").value);
 		
 //((document.getElementById("guess").value == number);
-	var canvas 	= document.getElementById("canvas");
 	var context = canvas.getContext("2d");
 	var	guess	= parseInt(document.getElementById("guess").value);
 	var	pastGuessesElement	= document.getElementById("pastGuesses");

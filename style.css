@@ -20,11 +20,8 @@ body {
 	margin:0px;
 }
 
-canvas {
-	width: 	20rem;
-	height: 2rem;
-	border:	1px solid #000000;
-	clear:	left;
+#tutorial {
+	border: 1px solid black;
 }
 
 .static {
@@ -37,14 +34,23 @@ canvas {
 	z-index:	6;
 }
 
+#numberCanvas {
+	width: 	20rem;
+	height: 2rem;
+	border:	1px solid #000000;
+}
+
+#guessContainer {
+	width:	20rem;
+}
+
 #lowGuess {
 	position:	relative;
 	float:		left;
 }
 
 #highGuess {
-	position:	relative;
-	right:		100px;
+	float:		right;
 }
 
 #pastGuesses {
