@@ -11,15 +11,22 @@ window.onload=draw;
 function draw() {
 	var canvas	= document.getElementById("tutorial");
 	var	ctx = canvas.getContext("2d");
+    
+    var ratio   = window.devicePixelRatio;
+    var oldWidth    = canvas.width;
+    var oldHeight   = canvas.height;
+    canvas.width    = oldWidth * ratio;
+    canvas.height   = oldHeight * ratio;
+    canvas.style.width = oldWidth + "px";
+    canvas.style.height = oldHeight + "px";
+    ctx.scale(ratio, ratio);
 	
-	/*
 	// Red/Blue overlapping rects:
 	ctx.fillStyle	= "rgb(200, 0, 0)";
 	ctx.fillRect(10, 10, 50, 50);
 	
 	ctx.fillStyle	= "rgba(0, 0, 200, 0.5)";
 	ctx.fillRect(30, 30, 50, 50);
-	*/
 	
 	/*
 	// Black/white/gray inlaid rectangles:
@@ -119,10 +126,12 @@ function draw() {
     ctx.stroke();
   }
 	*/
-	
-	// Linear gradient:
+
+    /*
+	// Linear gradient (doesn't currently work...):
 	var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
 	lineargradient.addColorStop(0, 'white');
 	lineargradient.addColorStop(1, 'black');
-	ctx.fillStyle(lineargradient);
+	ctx.fillStyle   = lineargradient;
+    */
 } // canvasFunction
