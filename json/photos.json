@@ -2,6 +2,26 @@
     "photos" : [
                 {   "source" : "./img/assisi-rail.jpg" },
                 {   "source" : "./img/assisi.jpg" },
-                {   "source" : "./img/cinque-bay.jpg" }
+                {   "source" : "./img/cinque-bay.jpg" },
+                {   "source" : "./img/cinque-mist.jpg" },
+                {   "source" : "./img/cinque-sunset.jpg" },
+                {   "source" : "./img/cupola.jpg" },
+                {   "source" : "./img/dome-sunset.jpg" },
+                {   "source" : "./img/dover-cliff.jpg" },
+                {   "source" : "./img/firenze.jpg" },
+                {   "source" : "./img/forum.jpg" },
+                {   "source" : "./img/gesu.jpg" },
+                {   "source" : "./img/jpii-memorial.jpg" },
+                {   "source" : "./img/katiefountain.jpg" },
+                {   "source" : "./img/lateran.jpg" },
+                {   "source" : "./img/lizard.jpg" },
+                {   "source" : "./img/napoli.jpg" },
+                {   "source" : "./img/oak.jpg" },
+                {   "source" : "./img/orvieto.jpg" },
+                {   "source" : "./img/stpeters_easter.jpg" },
+                {   "source" : "./img/stpeters.jpg" },
+                {   "source" : "./img/subiaco.jpg" },
+                {   "source" : "./img/trees-mountain.jpg" },
+                {   "source" : "./img/vatican-gardens.jpg" }
     ]
 }
