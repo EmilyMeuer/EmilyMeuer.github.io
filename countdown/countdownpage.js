@@ -18,7 +18,7 @@ window.onload = function() {
 	var daysGoingBackwards = [];
 	
 	// Calculate the squares:
-	for (var i = 0; i < daysRemaining; i++)
+	for (var i = 0; i < daysRemaining + 1; i++)
 	{
 		if (i === (square * square)) {
 			daysGoingBackwards[i] = 's';
@@ -31,7 +31,7 @@ window.onload = function() {
 	
 	square = 1;
 	var cellIndex = 0;
-	for (var i = 0; i < daysRemaining; i++)
+	for (var i = 0; i < daysRemaining + 1; i++)
 	{
 		var newCell = row.insertCell(cellIndex);
 		cellIndex++;
